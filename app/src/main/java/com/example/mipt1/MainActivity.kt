@@ -1,5 +1,6 @@
 package com.example.mipt1
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -12,9 +13,14 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
         val button = findViewById<Button>(R.id.button)
+        val colorButton = findViewById<Button>(R.id.colorButton)
 
         button.setOnClickListener {
             textView.text = "Button Clicked!"
+        }
+
+        colorButton.setOnClickListener {
+            textView.setTextColor(Color.RED)
         }
     }
 }
